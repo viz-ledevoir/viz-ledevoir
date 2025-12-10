@@ -317,14 +317,25 @@ header {
 main {
   position: relative;
   top: $header-height;
-  background-color: #FAF0E6;
 }
+
+  .rainbow-container{
+    background-image: linear-gradient(
+      #ffadad, /* Pastel Red */
+      #ffd6a5, /* Pastel Orange */
+      #fdffb6, /* Pastel Yellow */
+      #caffbf, /* Pastel Green */
+      #9bf6ff, /* Pastel Blue */
+      #a0c4ff, /* Pastel Indigo */
+      #bdb2ff  /* Pastel Violet */
+    );
+  }
 
 .intro-section {
   position: relative;
   max-width: $text-max-width;
-  padding: $main-padding;
-  margin: $intro-margin-top auto 0;
+  padding: $intro-margin-top $main-padding;
+  margin: 0 auto;
   box-sizing: content-box;
 
   h1 {
@@ -819,6 +830,7 @@ footer {
   //padding: 15% 25px 0 25px;
   padding: 10% 25px 0 25px;
   margin-top: 40px;
+  background-color: #bdb2ff;
 
   > div {
     max-width: $footer-max-width;
@@ -1104,6 +1116,13 @@ footer {
     &#item3{
       top: 165vh;
       left: 5vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item4{
+      top: 195vh;
+      left: 80vw;
       height: auto;
       width: 250px;
     }
