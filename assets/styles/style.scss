@@ -317,6 +317,7 @@ header {
 main {
   position: relative;
   top: $header-height;
+  background-color: #FAF0E6;
 }
 
 .intro-section {
@@ -1076,20 +1077,35 @@ footer {
     .items-img{
       height: 100%;
       width: 100%;
+      filter: drop-shadow(5px 5px 5px #22222266);
     }
 
     &#item0{
       top: 25vh;
       left: 80vw;
       height: auto;
-      width: 100px;
+      width: 150px;
     }
 
     &#item1{
-      top: 105vh;
+      top: 75vh;
       left: 5vw;
       height: auto;
       width: 200px;
+    }
+
+    &#item2{
+      top: 150vh;
+      left: 80vw;
+      height: auto;
+      width: 200px;
+    }
+
+    &#item3{
+      top: 165vh;
+      left: 5vw;
+      height: auto;
+      width: 250px;
     }
   }
 
