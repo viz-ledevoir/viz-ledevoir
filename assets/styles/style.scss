@@ -334,7 +334,7 @@ main {
 .intro-section {
   position: relative;
   max-width: $text-max-width;
-  padding: $intro-margin-top $main-padding;
+  padding: 175px 25px 0;;
   margin: 0 auto;
   box-sizing: content-box;
 
@@ -1054,6 +1054,144 @@ footer {
 
 #collapseContent.show-content {
   max-height: 1000px;
+  position: relative;
+}
+
+
+// Guirlandes
+
+
+
+#Christmas_Light{
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.light_cord {
+  fill: none;
+  stroke: #174700;
+}
+
+.light_fixture {
+  fill: #134413;
+}
+
+.red_bulb {
+  fill: #CA2128;
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+.green_bulb {
+  fill: #2D754A;
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+.blue_bulb {
+  fill: #2C3EA8;
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+.white_bulb {
+  fill: #F5EED7;
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+.gold_bulb {
+  fill: #ffcc5e;
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+
+/* Simply changing the opacity of the SVG fill to create the glow effect for the bulbs */
+
+.bulb {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: glow;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-name: glow;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    fill-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 1
+  }
+}
+
+@keyframes glow {
+  0% {
+    fill-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 1.0
+  }
+}
+
+
+/* Made a set of ten animation delays to create a more random effect of lights blinking.  Simplest way without jumping through SVG hoops. */
+
+.blink-1 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.blink-2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.blink-3 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.blink-4 {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.blink-5 {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.blink-6 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+.blink-7 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.blink-8 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.blink-9 {
+  -webkit-animation-delay: 0.95s;
+  animation-delay: 0.95s;
+}
+
+.blink-10 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 
 
@@ -1121,7 +1259,49 @@ footer {
     }
 
     &#item4{
-      top: 195vh;
+      top: 235vh;
+      left: 80vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item5{
+      top: 250vh;
+      left: 5vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item6{
+      top: 330vh;
+      left: 80vw;
+      height: auto;
+      width: 200px;
+    }
+
+    &#item7{
+      top: 390vh;
+      left: 5%;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item8{
+      top: 425vh;
+      left: 80vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item9{
+      top: 470vh;
+      left: 5vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item10{
+      top: 510vh;
       left: 80vw;
       height: auto;
       width: 250px;
@@ -1345,7 +1525,8 @@ footer {
   }
 
   .intro-section {
-    margin-top: $intro-mobile-margin-top;
+    // margin-top: $intro-mobile-margin-top;
+    padding-top: $intro-mobile-margin-top;;
 
     h1 {
       font-size: $intro-mobile-h1-size;
@@ -1421,7 +1602,8 @@ footer {
 
 @media screen and (max-width: $small-screen) {
   .intro-section {
-    margin-top: $intro-small-screen-margin-top;
+    // margin-top: $intro-small-screen-margin-top;
+    padding-top: $intro-small-screen-margin-top;;
 
     h1 {
       font-size: $intro-small-screen-h1-size;
