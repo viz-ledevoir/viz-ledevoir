@@ -82,8 +82,10 @@ figure {
 
   img {
     position: relative;
-    left: (100% - $fig-image-width) / 2;
-    width: $fig-image-width;
+    // left: (100% - $fig-image-width) / 2;
+    width: 50% !important;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   figcaption {
@@ -330,6 +332,7 @@ main {
       #a0c4ff, /* Pastel Indigo */
       #bdb2ff  /* Pastel Violet */
     );
+    position: relative;
   }
 
 .intro-section {
@@ -1114,7 +1117,7 @@ footer {
 // **** ADD ON ****
 .paralaxZone{
   position: absolute;
-  height: auto;
+  height: 100%;
   width: 100%;
 
   .items{
@@ -1131,84 +1134,84 @@ footer {
     }
 
     &#item0{
-      top: 25vh;
+      top: 3%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item1{
-      top: 75vh;
+      top: 10%;
       left: 5vw;
       height: auto;
       width: 250px;
     }
 
     &#item2{
-      top: 150vh;
+      top: 16%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item3{
-      top: 165vh;
+      top: 22%;
       left: 5vw;
       height: auto;
       width: 250px;
     }
 
     &#item4{
-      top: 235vh;
+      top: 30%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item5{
-      top: 270vh;
+      top: 37%;
       left: 5vw;
       height: auto;
       width: 250px;
     }
 
     &#item6{
-      top: 330vh;
+      top: 46%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item7{
-      top: 390vh;
+      top: 51%;
       left: 5%;
       height: auto;
       width: 250px;
     }
 
     &#item8{
-      top: 435vh;
+      top: 58%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item9{
-      top: 490vh;
+      top: 64%;
       left: 5vw;
       height: auto;
       width: 250px;
     }
 
     &#item10{
-      top: 510vh;
+      top: 70%;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item11{
-      top: 570vh;
+      top: 77%;
       left: 5vw;
       height: auto;
       width: 250px;
@@ -1406,14 +1409,14 @@ footer {
 
 
 // ***** Mobile *****
-@media screen and (max-width: $extra-large-screen) {
-  figure img {
-    left: 0;
-    width: $fig-mobile-image-width;
-  }
+@media screen and (max-width: 1338px) {
   .paralaxZone{
     display: none;
   }
+}
+
+@media screen and (max-width: $extra-large-screen) {
+
 }
 
 @media screen and (max-width: $large-screen) {
@@ -1527,6 +1530,18 @@ footer {
   .social-buttons {
     button{
       padding-inline: 4px;
+    }
+  }
+
+  figure {
+    margin: 2.5em 0;
+  
+    img {
+      position: relative;
+      // left: (100% - $fig-image-width) / 2;
+      width: 100% !important;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
