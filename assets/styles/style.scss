@@ -45,7 +45,8 @@ h6 {
 }
 
 a {
-  color: $blue;
+  // color: $blue;
+  color: #0e2f6a;
 
   &:hover {
     color: $dark-blue;
@@ -965,6 +966,12 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  .mini-text{
+    p {
+      font-size: 1.1em;
+    }
+  }
   
   .left-column, .right-column {
     display: flex;
@@ -978,24 +985,47 @@ footer {
   
   .draggable {
     padding: 12px;
-    background: #eee;
+    // background: #eee;
+
+    border: solid 4px white;
+    background-color: #fffa;
     cursor: grab;
     border-radius: 6px;
-    width: 150px;
     text-align: center;
+
+    // width: 150px;
+    width: 20vh;
+    max-width: 700px;
+    height: 20vh;
 
     //for mobile drag and drop diagonally
     touch-action: none;
     -webkit-user-select: none;
     user-select: none;
 
+    p{
+      font-size: 1em;
+    }
+    img{
+      width: 60%;
+    }
   }
   
   .dropzone {
-    width: 150px;
-    height: 60px;
-    background: #ddd;
+    // width: 150px;
+    // height: 60px;
+    width: 20vh;
+    max-width: 700px;
+    height: 20.4vh;
+
+    text-align: center;
+
+
+    // background: #ddd;
     border: 2px dashed #aaa;
+    background-color: #fffa;
+
+
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -1006,6 +1036,12 @@ footer {
 
 
 // ***** Collapse items *****
+#collapseElement{
+  background-color: #ffffff88;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0em 1em;
+  border-radius: 5px;
+}
 #collapseMenu {
   display: flex;
   align-items: center;
@@ -1078,7 +1114,7 @@ footer {
 // **** ADD ON ****
 .paralaxZone{
   position: absolute;
-  height: 200vh;
+  height: auto;
   width: 100%;
 
   .items{
@@ -1098,21 +1134,21 @@ footer {
       top: 25vh;
       left: 80vw;
       height: auto;
-      width: 150px;
+      width: 250px;
     }
 
     &#item1{
       top: 75vh;
       left: 5vw;
       height: auto;
-      width: 200px;
+      width: 250px;
     }
 
     &#item2{
       top: 150vh;
       left: 80vw;
       height: auto;
-      width: 200px;
+      width: 250px;
     }
 
     &#item3{
@@ -1130,7 +1166,7 @@ footer {
     }
 
     &#item5{
-      top: 250vh;
+      top: 270vh;
       left: 5vw;
       height: auto;
       width: 250px;
@@ -1140,7 +1176,7 @@ footer {
       top: 330vh;
       left: 80vw;
       height: auto;
-      width: 200px;
+      width: 250px;
     }
 
     &#item7{
@@ -1151,14 +1187,14 @@ footer {
     }
 
     &#item8{
-      top: 425vh;
+      top: 435vh;
       left: 80vw;
       height: auto;
       width: 250px;
     }
 
     &#item9{
-      top: 470vh;
+      top: 490vh;
       left: 5vw;
       height: auto;
       width: 250px;
@@ -1167,6 +1203,13 @@ footer {
     &#item10{
       top: 510vh;
       left: 80vw;
+      height: auto;
+      width: 250px;
+    }
+
+    &#item11{
+      top: 570vh;
+      left: 5vw;
       height: auto;
       width: 250px;
     }
@@ -1368,12 +1411,15 @@ footer {
     left: 0;
     width: $fig-mobile-image-width;
   }
-}
-
-@media screen and (max-width: $large-screen) {
   .paralaxZone{
     display: none;
   }
+}
+
+@media screen and (max-width: $large-screen) {
+  // .paralaxZone{
+  //   display: none;
+  // }
   
   html {
     font-size: 11pt;
